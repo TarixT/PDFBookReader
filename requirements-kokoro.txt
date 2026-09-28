@@ -1,0 +1,3 @@
+# Install after your CUDA-enabled torch/torchaudio/torchvision packages.
+kokoro>=0.9.4,<0.10
+misaki[en]>=0.9.4,<0.10

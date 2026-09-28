@@ -1,0 +1,13 @@
+from abc import ABC, abstractmethod
+
+
+class TrainingBackend(ABC):
+    """Optional training lifecycle, independent of audiobook inference."""
+    @abstractmethod
+    def prepare_dataset(self, source: str, destination: str): ...
+    @abstractmethod
+    def train(self, dataset: str, **settings): ...
+    @abstractmethod
+    def save_checkpoint(self, path: str): ...
+    @abstractmethod
+    def load_checkpoint(self, path: str): ...
